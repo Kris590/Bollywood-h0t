@@ -15,6 +15,8 @@
     }
     .container {
       padding: 30px;
+      max-width: 700px;
+      margin: 0 auto;
     }
     h1 {
       color: #ff4081;
@@ -77,9 +79,24 @@
       border-radius: 10px;
       font-size: 18px;
     }
+
+    /* Ad banner placement */
+    .ad-container {
+      position: fixed;
+      right: 0;
+      top: 100px;
+      z-index: 999;
+    }
+
+    @media (max-width: 768px) {
+      .ad-container {
+        display: none; /* Hide ad on small screens */
+      }
+    }
   </style>
 </head>
 <body>
+
   <div class="container">
     <h1>Hot Bollywood Divas PDF – Only ₹10</h1>
     <p>Download a premium PDF featuring a sizzling collection of high-quality images of top Bollywood actresses. Just ₹10 to unlock instantly.</p>
@@ -102,6 +119,21 @@
       <h3>Payment Verified!</h3>
       <a href="images-to-pdf_compressed.pdf" download class="download-link">Download Now</a>
     </div>
+  </div>
+
+  <!-- Adsterra Banner Code -->
+  <div class="ad-container">
+    <!-- Replace this script with your actual Adsterra 160x600 code -->
+    <script type="text/javascript">
+      atOptions = {
+        'key' : 'your_adsterra_key_here',
+        'format' : '160x600',
+        'height' : 600,
+        'width' : 160,
+        'params' : {}
+      };
+      document.write('<script type="text/javascript" src="https://www.profitabledisplaynetwork.com/' + atOptions.key + '/invoke.js"><\/script>');
+    </script>
   </div>
 
   <script>
